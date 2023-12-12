@@ -3,8 +3,6 @@
 #include <string.h>
 #include "./heap.h"
 
-// https://github.com/tsoding/memalloc/blob/master/heap.c
-
 uintptr_t heap[HEAP_CAP_WORDS] = {0};
 const uintptr_t *stack_base = 0;
 
