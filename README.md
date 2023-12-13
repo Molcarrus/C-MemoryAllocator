@@ -5,8 +5,8 @@ A custom memory allocator written in C.
 
 __Quick Start__:
 ```
-make
-./heap
+> make
+> ./heap
 ```
 
 __Limitations:__
