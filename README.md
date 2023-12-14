@@ -42,3 +42,7 @@ __Limitations:__
 - Works only when compiled with `gcc`
 - The pointers to the heap can only be located in the heap and stack
 - Doesn't work with packed structs
+
+__Sources__:
+- [Malloc Internals](https://sourceware.org/glibc/wiki/MallocInternals)
+- [Tsoding's Garbage Collector](https://github.com/tsoding/memalloc/blob/master/heap.c)
