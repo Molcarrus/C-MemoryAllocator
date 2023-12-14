@@ -23,10 +23,13 @@ Since all chunks are multiples of 8 bytes, the 3 LSBs of the chunk size can be u
 
 In order to ensure that a chunk's payload area is large enough to hold the overhead needed by the allocator, the minimum size of a chunk is `4*sizeof(void*)` (unless `size_t` is not the same size as `void*`)
 ![In-use Chunk](img/inusechunk.png)
+![Free Chunk](img/freechunk.png)
 
 Allocated heaps are always aligned to a power-of-two address. Thus, when a chunk is in an allocated heap, the address of the `heap_info` can be computed based on the address of the chunk:
+![Chunk to Heap](img/chunktoheap.png)
 
 Memory for allocated arenas is, conveniently, taken from the initial heap for that arena: 
+![Heaps and Arenas](img/heapsandarenas.png)
 
 __Quick Start__:
 ```
