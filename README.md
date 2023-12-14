@@ -22,7 +22,7 @@ Since all chunks are multiples of 8 bytes, the 3 LSBs of the chunk size can be u
     Prev chunk in use - if set, the previous chunk is still being used by the application, and thus the `prev_size` field is invalid.
 
 In order to ensure that a chunk's payload area is large enough to hold the overhead needed by the allocator, the minimum size of a chunk is `4*sizeof(void*)` (unless `size_t` is not the same size as `void*`)
-![In-use Chunk](img/in-use chunk.png)
+![In-use Chunk](img/inusechunk.png)
 
 Allocated heaps are always aligned to a power-of-two address. Thus, when a chunk is in an allocated heap, the address of the `heap_info` can be computed based on the address of the chunk:
 
